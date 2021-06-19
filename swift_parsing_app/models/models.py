@@ -6,7 +6,16 @@ from .mixins import CreationModificationDateMixin
 
 
 class SourceFile(models.Model, CreationModificationDateMixin):
+    IN_PROGRESS = 1
+    PROCESSED = 2
+
+    FILE_STATUSES = [
+        (IN_PROGRESS, _('Processing in progress')),
+        (PROCESSED, _('File processed')),
+    ]
+
     file_name = models.CharField(max_length=128, null=False)
+    status = models.PositiveSmallIntegerField(blank=True, choices=FILE_STATUSES)
     file_content = models.TextField()
 
     class Meta:
