@@ -16,5 +16,5 @@ DATABASES = {
     }
 }
 
-# INSTALLED_APPS = ['livereload'] + INSTALLED_APPS
-# MIDDLEWARE = MIDDLEWARE + ['livereload.middleware.LiveReloadScript']
+INSTALLED_APPS = ['livereload'] + INSTALLED_APPS
+MIDDLEWARE = MIDDLEWARE + ['livereload.middleware.LiveReloadScript']

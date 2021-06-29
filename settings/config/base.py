@@ -25,10 +25,9 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-# STATIC_URL = '/dist/'
-STATIC_URL = '/static/'
+STATIC_URL = '/dist/'
 STATICFILES_DIRS = [STATIC_DIR]
-# STATIC_ROOT = BASE_DIR / 'dist'
+STATIC_ROOT = BASE_DIR / 'dist'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -46,7 +45,8 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 THIRD_PARTY_APPS = [
-    # "whitenoise.runserver_nostatic",
+    "whitenoise.runserver_nostatic",
+    'rest_framework',
 ]
 LOCAL_APPS = [
     'swift_parsing_app.apps.SwiftParsingAppConfig',
@@ -58,7 +58,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -66,6 +66,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MIDDLEWARE_CLASSES = (
+    'livereload.middleware.LiveReloadScript',
+)
 
 # TEMPLATES
 TEMPLATES = [

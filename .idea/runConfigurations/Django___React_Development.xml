@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Django + React Development" type="Multirun" separateTabs="false" reuseTabsWithFailures="false" startOneByOne="true" markFailedProcess="true" hideSuccessProcess="false" delayTime="1.5">
+    <runConfiguration name="Webpack - Devserver" type="npm" />
+    <runConfiguration name="Django - Livereload" type="Python" />
+    <runConfiguration name="Django - Runserver" type="Django Server" />
+    <method v="2" />
+  </configuration>
+</component>
