@@ -110,11 +110,6 @@ def format_db():
     SwiftField.objects.all().delete()
 
 
-#
-#
-# SanctionList.objects.all().delete()
-# Customer.objects.all().delete()
-
 if __name__ == '__main__':
     print("Formating the Database")
     format_db()

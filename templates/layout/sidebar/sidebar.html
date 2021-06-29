@@ -1,0 +1,21 @@
+<!-- Sidenav -->
+<aside class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+        <!-- Brand -->
+        <div class="sidenav-header  align-items-center">
+            <a class="navbar-brand" href="{% url 'sanctions_screening:dashboard' %})">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg"
+                     class="navbar-brand-img" alt="...">
+            </a>
+        </div>
+        <div class="navbar-inner pt-2">
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse sidebar-container" id="sidenav-collapse-main">
+                {% include 'layout/sidebar/_sidebar_swift_parser.html' %}
+                <!-- Divider -->
+                <hr class="my-3">
+{#                {% include 'components/organisms/_sidebar_transaction_monitoring.html' %}#}
+            </div>
+        </div>
+    </div>
+</aside>

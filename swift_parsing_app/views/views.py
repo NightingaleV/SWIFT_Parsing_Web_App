@@ -35,9 +35,8 @@ class UploadSourceCSVFile(FormView):
         form_class = self.get_form_class()
         form = self.get_form(form_class)
         files = request.FILES.getlist('file_field')
-        csv_file = files[0]
+        uploaded_file = files[0]
         if form.is_valid():
-           
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
