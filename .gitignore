@@ -1,3 +1,11 @@
+# Custom Files
+.envs/*
+.env.yaml
+node_modules/*
+**/secrets.py
+dist/
+static/
+
 
 ### Python template
 # Byte-compiled / optimized / DLL files

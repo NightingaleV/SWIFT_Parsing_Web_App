@@ -1,0 +1,76 @@
+//@import "~@creative-tim-official/argon-dashboard-free/assets/scss/argon";
+//@import "vendor/argon-dashboard-react-master/src/assets/scss/argon-dashboard-react";
+
+//@import "~argon-dashboard/assets/scss/argon";
+
+
+// Bootstrap functions
+@import '~argon-dashboard/assets/scss/bootstrap/functions';
+@import "~argon-dashboard/assets/scss/bootstrap/mixins";
+
+// Argon functions
+@import "~argon-dashboard/assets/scss/custom/functions";
+
+@import "_pwc-colours";
+@import "_theme-variables";
+@import "~argon-dashboard/assets/scss/bootstrap/variables";
+
+
+
+// Argon mixins
+@import "~argon-dashboard/assets/scss/custom/mixins";
+@import "~argon-dashboard/assets/scss/bootstrap/root";
+@import "~argon-dashboard/assets/scss/bootstrap/reboot";
+@import "~argon-dashboard/assets/scss/bootstrap/type";
+@import "~argon-dashboard/assets/scss/bootstrap/images";
+@import "~argon-dashboard/assets/scss/bootstrap/code";
+@import "~argon-dashboard/assets/scss/bootstrap/grid";
+@import "~argon-dashboard/assets/scss/bootstrap/tables";
+@import "~argon-dashboard/assets/scss/bootstrap/forms";
+@import "~argon-dashboard/assets/scss/bootstrap/buttons";
+@import "~argon-dashboard/assets/scss/bootstrap/transitions";
+@import "~argon-dashboard/assets/scss/bootstrap/dropdown";
+@import "~argon-dashboard/assets/scss/bootstrap/button-group";
+@import "~argon-dashboard/assets/scss/bootstrap/input-group";
+@import "~argon-dashboard/assets/scss/bootstrap/custom-forms";
+@import "~argon-dashboard/assets/scss/bootstrap/nav";
+@import "~argon-dashboard/assets/scss/bootstrap/navbar";
+@import "~argon-dashboard/assets/scss/bootstrap/card";
+@import "~argon-dashboard/assets/scss/bootstrap/breadcrumb";
+@import "~argon-dashboard/assets/scss/bootstrap/pagination";
+@import "~argon-dashboard/assets/scss/bootstrap/badge";
+@import "~argon-dashboard/assets/scss/bootstrap/jumbotron";
+@import "~argon-dashboard/assets/scss/bootstrap/alert";
+@import "~argon-dashboard/assets/scss/bootstrap/progress";
+@import "~argon-dashboard/assets/scss/bootstrap/media";
+@import "~argon-dashboard/assets/scss/bootstrap/list-group";
+@import "~argon-dashboard/assets/scss/bootstrap/close";
+@import "~argon-dashboard/assets/scss/bootstrap/modal";
+@import "~argon-dashboard/assets/scss/bootstrap/tooltip";
+@import "~argon-dashboard/assets/scss/bootstrap/popover";
+@import "~argon-dashboard/assets/scss/bootstrap/carousel";
+@import "~argon-dashboard/assets/scss/bootstrap/utilities";
+@import "~argon-dashboard/assets/scss/bootstrap/print";
+
+// Argon components
+@import '~argon-dashboard/assets/scss/custom/components';
+@import '~argon-dashboard/assets/scss/custom/utilities';
+@import '~argon-dashboard/assets/scss/custom/vendors';
+
+@import '~chart.js/dist/Chart.min.css';
+
+// Custom Styles
+@import '_layout';
+
+// ICONS
+// -------------------------------------------
+// Font Awesome
+$fa-font-path:"../fonts";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+// Nucleo
+@import '~argon-dashboard/assets/vendor/nucleo/css/nucleo';
+//@import '~argon-dashboard/assets/vendor/nucleo/css/nucleo-svg';
+
+
+

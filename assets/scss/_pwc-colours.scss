@@ -1,0 +1,175 @@
+// PWC Color Wheel
+$pwc-orange: #D04A02 !default;
+$pwc-yellow: #FFB600 !default;
+$pwc-rose: #DB536A !default;
+$pwc-red: #E0301E !default;
+$pwc-tangerine: #EB8C00 !default;
+$pwc-medium-grey: #464646 !default;
+$pwc-grey: #7d7d7d !default;
+$pwc-light-grey: #DEDEDE !default;
+
+//$blue: $pwc-red !important;
+$primary: $pwc-tangerine;
+$secondary: $pwc-yellow;
+$info:          $pwc-rose;
+$warning:       $pwc-orange;
+$danger:        $pwc-red;
+$light:         $pwc-light-grey !default;
+$dark:          $pwc-medium-grey !default;
+
+
+.bg-pwc-yellow {
+  background: $pwc-yellow !important;
+}
+
+.text-pwc-yellow {
+  color: $pwc-yellow !important;
+}
+
+.bg-pwc-rose {
+  background: $pwc-rose !important;
+}
+
+.text-pwc-rose {
+  color: $pwc-rose !important;
+}
+
+.bg-pwc-red {
+  background: $pwc-red !important;
+}
+
+.text-pwc-red {
+  color: $pwc-red !important;
+}
+
+.bg-pwc-orange {
+  background: $pwc-orange !important;
+}
+
+.text-pwc-orange {
+  color: $pwc-orange !important;
+}
+
+.bg-pwc-tangerine {
+  background: $pwc-tangerine !important;
+}
+
+.text-pwc-tangerine {
+  color: $pwc-tangerine !important;
+}
+
+.bg-pwc-medium-grey {
+  background: $pwc-medium-grey !important;
+}
+
+.text-pwc-medium-grey {
+  color: $pwc-medium-grey !important;
+}
+
+.bg-pwc-grey {
+  background: $pwc-grey !important;
+}
+
+.text-pwc-grey {
+  color: $pwc-grey !important;
+}
+
+.bg-pwc-light-grey {
+  background: $pwc-light-grey !important;
+}
+// ----------------------------------------
+#sidenav-collapse-main {
+  padding-right: 0px !important;
+}
+
+.navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand > img {
+  max-height: 2.85rem;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  border-color: #D04A02;
+  background-color: #D04A02;
+}
+
+.text-pwc-light-grey {
+  color: $pwc-light-grey !important;
+}
+
+.card-header .btn:not(:last-child) {
+  margin-right: 0rem;
+}
+
+.card-profile-image img {
+  border: 0px solid #fff;
+}
+
+.card .table td, .card .table th {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.card-profile-stats > div {
+  margin-right: 0rem;
+  padding: .5rem;
+  text-align: center;
+}
+
+.card .table td, .card .table th {
+  padding-right: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.card-profile-image i {
+  font-size: 90px;
+  position: absolute;
+  left: 50%;
+  max-width: 140px;
+  transition: all .15s ease;
+  transform: translate(-50%, -50%) scale(1);
+  border: 3px solid #fff;
+  border-radius: .375rem;
+  margin-top: 10px;
+}
+
+.btn-primary:focus {
+  color: #fff;
+  background-color: #AD1B02;
+  border-color: #AD1B02;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #AD1B02;
+}
+
+.customer-detail-attributes {
+  font-size: 15px;
+  color: black
+}
+
+.page-item.active .page-link {
+  border-color: #EB8C00;
+  background-color: #EB8C00;
+}
+
+.customer-detail-attributes .list-group-item {
+  padding: .5rem;
+}
+
+.sidebar-container .navbar-heading {
+  font-size: 0.75rem;
+}
+
+.navbar-vertical.navbar-expand-xs .navbar-nav {
+  margin-left: 0.75rem;
+}
+
+.navbar-vertical.navbar-expand-xs .navbar-nav .nav-link {
+  padding: 0.4rem 0;
+}
+
+.customer-bar-chart {
+  padding: 1.15rem 1.5rem 2.35rem 1.5rem;
+}
