@@ -11,11 +11,14 @@
 // Argon functions
 @import "~argon-dashboard/assets/scss/custom/functions";
 
+// Custom Styles
+
 @import "_pwc-colours";
 @import "_theme-variables";
+
 @import "~argon-dashboard/assets/scss/bootstrap/variables";
 
-
+@import '_layout';
 
 // Argon mixins
 @import "~argon-dashboard/assets/scss/custom/mixins";
@@ -59,8 +62,6 @@
 
 @import '~chart.js/dist/Chart.min.css';
 
-// Custom Styles
-@import '_layout';
 
 // ICONS
 // -------------------------------------------
