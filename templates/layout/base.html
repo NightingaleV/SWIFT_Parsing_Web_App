@@ -23,7 +23,7 @@
 {% include 'layout/sidebar/sidebar.html' %}
 <div class="main-content" id="panel">
     {% include 'layout/navbar.html' %}
-    <main id="main-container" class="container-fluid mt--1">
+    <main id="main-container" class="container-fluid  mt--1">
         {% block pre-content %}
 
         {% endblock %}
@@ -43,8 +43,8 @@
 
     {# Modals #}
 </div>
-<!-- Scripts -->
 <script src="{% static 'js/bundle.js' %}"></script>
+
 {% block js_scripts %}
 {% endblock %}
 </body>

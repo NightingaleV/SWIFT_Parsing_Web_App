@@ -1,0 +1,47 @@
+//Button
+.btn-circle.btn-sm {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.btn-circle.btn-md {
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px;
+  border-radius: 25px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.btn-group>.btn-group:not(:last-child)>.btn-circle, .btn-group>.btn-circle:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+}
+
+.btn-group-vertical>.btn-group:not(:last-child)>.btn-circle, .btn-group-vertical>.btn-circle:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+}
+
+.btn-group-circle {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.btn-group-circle .dropdown-menu{
+  left: -140px
+}

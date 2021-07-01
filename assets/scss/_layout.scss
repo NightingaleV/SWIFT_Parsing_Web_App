@@ -16,3 +16,15 @@ $main-content-padding-x: 0px;
 div.sidenav-header {
     height: 90px;
 }
+
+// Navbar
+.navbar-vertical .navbar-heading {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+.navbar-brand h1{
+  text-transform: initial;
+}

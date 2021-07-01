@@ -7,48 +7,18 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row  mt-5">
-        <div class="col-xl-12 mt-5">
-            <div class="card">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card py-5">
                 <div class="card-header border-0">
                     <div class="row">
                         <div class="col">
-                            <h2 class="mb-0">Upload customers for screening</h2>
+                            <h2 class="mb-0">Upload Source File</h2>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">CSV file with the following structure: full_name, entity_type, address, city,
-                        country.</p>
-                    <a class="btn btn-primary float-right" data-toggle="collapse" href="#csvStructure" role="button"
-                       aria-expanded="false" aria-controls="csvStructure">
-                        Required columns
-                    </a>
-                    <div class="collapse col-8" id="csvStructure">
-                        <div class="">
-                            <ul class="list-group col-6 mx-2 mt-2 mb-4">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    full_name
-                                    <span class="badge text-white bg-pwc-orange badge-pill">Required</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    entity_type
-                                    <span class="badge text-white bg-pwc-orange badge-pill">Required</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    address
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    city
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    country
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <form action="" method="POST" enctype="multipart/form-data" class="col-6">
+                   <form action="" method="POST" enctype="multipart/form-data" class="col-6">
                         {% csrf_token %}
                         {% if form.non_fields_errors %}
                             <div class="alert alert-danger" role="alert">
@@ -57,7 +27,7 @@
                         {% endif %}
                         <div class="form-group">
                             <label for="{{ form.file_field.id_for_label }}" class="form-control-label">Upload csv
-                                file</label>
+                                file with swift messages</label>
                             {% if form.file_field.errors %}
                                 <div class="alert alert-danger" role="alert">
                                     {{ form.file_field.errors }}
@@ -70,11 +40,9 @@
                                 </button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
 {% endblock %}

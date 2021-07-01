@@ -12,11 +12,11 @@ class IndexView(TemplateView):
     template_name = 'pages/index.html'
 
 
-# class CustomerList(ListView):
-#     model = Customer
-#     context_object_name = 'customer_list'
-#     template_name = 'pages/customer_list.html'
-#     # paginate_by = 10
+class CustomerList(ListView):
+    model = SwiftMessage
+    context_object_name = 'swift_messages'
+    template_name = 'pages/customer_list.html'
+    # paginate_by = 10
 #
 #
 # class CustomerCreateView(CreateView):
@@ -26,8 +26,8 @@ class IndexView(TemplateView):
 #     success_url = reverse_lazy('swift_parsing_app:customer-list')
 
 
-class UploadSourceCSVFile(FormView):
-    template_name = 'layout/sanctions_screening/upload_customer_csv_file.html'
+class UploadSwiftCSVFile(FormView):
+    template_name = 'pages/upload_swift_file.html'
     form_class = FileFieldForm
     success_url = reverse_lazy('sanctions_screening:upload-customer-file-success')
 

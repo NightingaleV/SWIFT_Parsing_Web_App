@@ -18,7 +18,9 @@
 
 @import "~argon-dashboard/assets/scss/bootstrap/variables";
 
-@import '_layout';
+
+
+
 
 // Argon mixins
 @import "~argon-dashboard/assets/scss/custom/mixins";
@@ -62,7 +64,8 @@
 
 @import '~chart.js/dist/Chart.min.css';
 
-
+@import '_components';
+@import '_layout';
 // ICONS
 // -------------------------------------------
 // Font Awesome
