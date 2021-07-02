@@ -3,6 +3,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from .mixins import CreationModificationDateMixin
+from .managers import SwiftFieldValueQuerySet
 
 
 class SourceFile(CreationModificationDateMixin, models.Model):
@@ -98,11 +99,14 @@ class SwiftFieldValue(CreationModificationDateMixin, models.Model):
     swift_field = models.ForeignKey(SwiftField, related_name='swift_values', on_delete=models.CASCADE)
     field_value = models.CharField(max_length=512, null=True)
 
+    objects = models.Manager()
+    select = SwiftFieldValueQuerySet.as_manager()
+
     class Meta:
         db_table = 'swift_field_value'
 
 
 class SwiftFieldValueDetail(CreationModificationDateMixin, models.Model):
     swift_field_value = models.ForeignKey(SwiftFieldValue, related_name='swift_detailed_values',
-                                             on_delete=models.CASCADE)
+                                          on_delete=models.CASCADE)
     detailed_value = models.CharField(max_length=512, null=True)
