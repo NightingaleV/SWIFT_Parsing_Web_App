@@ -1,7 +1,16 @@
 from rest_framework import serializers
 from django.utils.translation import ugettext as _
 
-from .models import SwiftMessage, SwiftFieldValue
+from .models import SourceFile, SwiftMessage, SwiftFieldValue
+
+
+class SourceFileSerializer(serializers.ModelSerializer):
+    status = serializers.CharField(source='get_status_display')
+    total_msg_ctn = serializers.IntegerField()
+
+    class Meta:
+        model = SourceFile
+        fields = ['id', 'file_name', 'status', 'created_at', 'total_msg_ctn']
 
 
 class SwiftMessageSerializer(serializers.ModelSerializer):
@@ -17,6 +26,17 @@ class SwiftMessageSerializer(serializers.ModelSerializer):
             'direction', 'message_content',
             'message_type', 'message_type_purpose', 'message_type_description'
         ]
+
+
+class SourceFileDetailSerializer(serializers.ModelSerializer):
+    pass
+    status = serializers.CharField(source='get_status_display')
+    swift_messages = SwiftMessageSerializer(many=True, read_only=True)
+    total_msg_ctn = serializers.IntegerField()
+
+    class Meta:
+        model = SourceFile
+        fields = ['id', 'file_name', 'status', 'created_at', 'total_msg_ctn', 'swift_messages']
 
 
 class SwiftFieldValueSerializer(serializers.ModelSerializer):

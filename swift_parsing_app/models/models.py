@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from .mixins import CreationModificationDateMixin
-from .managers import SwiftFieldValueQuerySet
+from .managers import SwiftFieldValueQuerySet, SourceFileQuerySet, SwiftMessageQuerySet
 
 
 class SourceFile(CreationModificationDateMixin, models.Model):
@@ -18,6 +18,9 @@ class SourceFile(CreationModificationDateMixin, models.Model):
     file_name = models.CharField(max_length=128, null=False)
     status = models.PositiveSmallIntegerField(blank=True, choices=FILE_STATUSES)
     file_content = models.TextField()
+
+    objects = models.Manager()
+    select = SourceFileQuerySet.as_manager()
 
     class Meta:
         db_table = 'source_file'
@@ -68,6 +71,9 @@ class SwiftMessage(CreationModificationDateMixin, models.Model):
     message_type = models.ForeignKey(MessageType, related_name='swift_messages', on_delete=models.CASCADE)
     basic_header = models.CharField(max_length=64, null=True, blank=True)
     application_header = models.CharField(max_length=64, null=True, blank=True)
+
+    objects = models.Manager()
+    select = SwiftMessageQuerySet.as_manager()
 
     class Meta:
         db_table = 'swift_message'
