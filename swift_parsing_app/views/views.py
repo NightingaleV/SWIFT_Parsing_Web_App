@@ -12,7 +12,7 @@ class IndexView(TemplateView):
     template_name = 'pages/index.html'
 
 
-class CustomerList(ListView):
+class DashboardView(ListView):
     model = SwiftMessage
     context_object_name = 'swift_messages'
     template_name = 'pages/customer_list.html'

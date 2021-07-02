@@ -2,7 +2,7 @@ from django.urls import path
 from django.urls import path, include, reverse
 from django.views.generic import TemplateView
 
-from .views import IndexView, UploadSwiftCSVFile
+from .views import IndexView, UploadSwiftCSVFile, DashboardView
 
 app_name = 'swift_parsing_app'
 
@@ -28,7 +28,7 @@ supporting_urlpatterns = [
 
 # API Access points
 api_urlpatterns = [
-    # path('api/', include('swift_parsing_app.api.router')),
+    path('api/', include('swift_parsing_app.api.router')),
     path('upload-swift-file/', UploadSwiftCSVFile.as_view(), name='upload-swift-file'),
 ]
 
