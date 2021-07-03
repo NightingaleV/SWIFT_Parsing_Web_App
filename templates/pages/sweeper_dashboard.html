@@ -1,0 +1,17 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block title %}PwC Sanction Screening solution
+{% endblock %}
+{% url 'sanctions_screening:dashboard' as url_of_current_screen %}
+{% block pre-content %}
+
+{% endblock %}
+
+{% block content %}
+    <div id="sweeper-dashboard-app">
+
+    </div>
+{% endblock %}
+{% block js_scripts %}
+    <script src="{% static 'react/SweeperDashboard.js' %}"></script>
+{% endblock %}

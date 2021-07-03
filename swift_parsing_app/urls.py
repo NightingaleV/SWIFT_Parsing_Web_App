@@ -9,7 +9,7 @@ app_name = 'swift_parsing_app'
 # UI Pages
 general_urlpatterns = [
     path('', IndexView.as_view(), name='home-page'),
-    path('dashboard', DashboardView.as_view(), name='dashboard')
+    path('dashboard', DashboardView.as_view(), name='sweeper-dashboard')
     # path('dashboard-react/', ListSanctionAlertsReactApp.as_view(), name='dashboard-react'),
     # path('archive/', ListCloseSanctionAlerts.as_view(), name='alert-archive'),
     # path('alert/<uuid:sanction_alert_id>/', UpdateSanctionAlerts.as_view(), name='update-sanction-alert'),

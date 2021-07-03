@@ -9,7 +9,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = [{
     devtool: 'inline-source-map',
     entry: {
-        'react/testApp': __dirname + '/swift_parsing_app/react_apps/TestApp.js',
+        'react/sweeperDashboard': __dirname + '/swift_parsing_app/react_apps/SweeperDashboard.js',
         'js/bundle': __dirname + '/assets/js/master.js',
         'css/master': __dirname + '/assets/scss/master.scss',
     }

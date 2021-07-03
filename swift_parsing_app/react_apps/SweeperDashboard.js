@@ -24,4 +24,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App/>, document.getElementById('test-app'));
+ReactDOM.render(<App/>, document.getElementById('sweeper-dashboard-app'));

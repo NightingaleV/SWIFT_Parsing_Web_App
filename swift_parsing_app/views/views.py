@@ -12,10 +12,10 @@ class IndexView(TemplateView):
     template_name = 'pages/index.html'
 
 
-class DashboardView(ListView):
-    model = SwiftMessage
-    context_object_name = 'swift_messages'
-    template_name = 'pages/customer_list.html'
+class DashboardView(TemplateView):
+    # model = SwiftMessage
+    # context_object_name = 'swift_messages'
+    template_name = 'pages/sweeper_dashboard.html'
     # paginate_by = 10
 #
 #
