@@ -43,6 +43,13 @@ def populate_swift_fields():
 
 def populate_source_file():
     source_file = SourceFile.objects.get_or_create(file_name='test_file_001.csv', status=2)
+    source_file = SourceFile.objects.get_or_create(file_name='test_file_002.csv', status=1)
+    source_file = SourceFile.objects.get_or_create(file_name='test_file_003.csv', status=2)
+    source_file = SourceFile.objects.get_or_create(file_name='test_file_004.csv', status=2)
+    source_file = SourceFile.objects.get_or_create(file_name='this_name_is_much_longer_than_normal_test_file_005.csv', status=2)
+    source_file = SourceFile.objects.get_or_create(file_name='test_file_006.csv', status=2)
+    source_file = SourceFile.objects.get_or_create(file_name='this_name_is_bit_longer_than_normal_test_file_005.csv', status=2)
+    source_file = SourceFile.objects.get_or_create(file_name='test_file_005.csv', status=2)
     print('Source Files were created')
     pass
 

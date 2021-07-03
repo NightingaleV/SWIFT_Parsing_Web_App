@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // Internal imports
-//
+import {TopHeader, DataframeDashboard} from "./sweeper_dashboard/components/organisms";
 //
 // // function AllProviders({ children }) {
 // //   return (
@@ -17,8 +17,14 @@ import ReactDOM from 'react-dom';
 function App() {
     return (
         <>
-            <div className="alert alert-success" role="alert">
-                <strong>It just works!</strong> React is working fine! Just fine!
+            <header className="dashboard-header">
+                <TopHeader/>
+            </header>
+            <main className="dashboard-content">
+                <DataframeDashboard/>
+            </main>
+            <div className="modals-container">
+
             </div>
         </>
     );
