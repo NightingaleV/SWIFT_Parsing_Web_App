@@ -6,12 +6,14 @@ from rest_framework.response import Response
 from swift_parsing_app.models import SourceFile, SwiftMessage, SwiftFieldValue
 from swift_parsing_app.models.serializers import (SourceFileSerializer, SourceFileDetailSerializer,
                                                   SwiftMessageSerializer, SwiftFieldValueSerializer)
+from .pagination import MessagePagination
 from django.db.models import Q, Prefetch, Sum, Max, Count, Case, When, Value, IntegerField, Subquery, OuterRef
 
 
 class SourceFileViewSet(viewsets.ModelViewSet):
     queryset = SourceFile.select.all()
     serializer_class = SourceFileSerializer
+    pagination_class = MessagePagination
 
     def get_queryset(self):
         return SourceFile.select.get_msg_count()
@@ -24,6 +26,7 @@ class SourceFileViewSet(viewsets.ModelViewSet):
         return SourceFileSerializer
         # if self.action == 'retrieve':
         #     return SourceFileDetailSerializer
+
 
     @action(detail=True, methods=['get'])
     def related_messages(self, request, pk=None):
@@ -41,8 +44,6 @@ class SwiftMessageReadViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = SwiftMessage.objects.all()
     serializer_class = SwiftMessageSerializer
 
-    # def list(self, request):
-
     @action(detail=True, methods=['get'])
     def related_field_values(self, request, pk=None):
         related_field_values = SwiftFieldValue.select.related_field_values(swift_message_pk=pk)
@@ -53,3 +54,5 @@ class SwiftMessageReadViewSet(viewsets.ReadOnlyModelViewSet):
 class SwiftFieldValueViewSet(viewsets.ModelViewSet):
     queryset = SwiftFieldValue.objects.all()
     serializer_class = SwiftFieldValueSerializer
+
+
