@@ -20,7 +20,7 @@ function App() {
             <header className="dashboard-header">
                 <TopHeader/>
             </header>
-            <main className="dashboard-content">
+            <main className="dashboard-content mt--7 mx-4">
                 <DataframeDashboard/>
             </main>
             <div className="modals-container">

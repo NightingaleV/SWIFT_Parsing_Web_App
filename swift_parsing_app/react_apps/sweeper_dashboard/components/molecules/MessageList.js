@@ -4,6 +4,7 @@ import ReactPaginate from "react-paginate";
 // import classNames from 'classnames';
 import {SourceFileList} from '../molecules'
 import {truncate} from "../../../utils";
+import {MessageRow} from "../atoms";
 
 // Assets
 
@@ -24,10 +25,28 @@ export function MessageList(props) {
                 <div className="card-header border-0">
                     <div className="row align-items-center">
                         <div className="col">
-                            <h3 className="mb-0">Page visits</h3>
+                            <h3 className="mb-0">File Content</h3>
                         </div>
-                        <div className="col text-right">
-                            <a href="" className="btn btn-sm btn-primary">See all</a>
+                        <div className="col">
+                            <ul className="nav nav-pills flex-column flex-sm-row" id="tabs-text" role="tablist">
+                            <li className="nav-item">
+                                <a className="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-toggle="tab"
+                                   href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">Meta
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab"
+                                   href="#tabs-text-2" role="tab" aria-controls="tabs-text-2"
+                                   aria-selected="false">Content
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab"
+                                   href="#tabs-text-3" role="tab" aria-controls="tabs-text-3"
+                                   aria-selected="false">Content - Detail
+                                </a>
+                            </li>
+                        </ul>
                         </div>
                     </div>
                 </div>
@@ -36,27 +55,15 @@ export function MessageList(props) {
                         <thead className="thead-light">
                         <tr>
                             <th scope="col">Ref ID</th>
+                            <th scope="col">Ref ID</th>
                             <th scope="col">Transaction Id</th>
                             <th scope="col">Field</th>
                             <th scope="col">Values</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {swiftMessageList.map(({transaction_id, direction, message_type}) =>
-                            <tr key={transaction_id}>
-                                <th scope="row">
-                                    0551665IWOAJIEJGF
-                                </th>
-                                <td>
-                                    {transaction_id}
-                                </td>
-                                <td>
-                                    <i className="fas fa-arrow-down text-danger mr-3"></i> {direction}
-                                </td>
-                                <td>
-                                    {message_type}
-                                </td>
-                            </tr>
+                        {swiftMessageList.map((message) =>
+                            <MessageRow message={message}/>
                         )}
                         </tbody>
                     </table>
@@ -80,7 +87,6 @@ export function MessageList(props) {
                             disabledClassName={"disabled"}
                             activeClassName={"active"}/>
                     </nav>
-
 
                 </div>
             </div>

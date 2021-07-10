@@ -10,7 +10,7 @@ export function DataframeDashboard(props) {
 
     const [sourceFiles, setSourceFiles] = useState([]);
     const [sourceFileDetail, setSourceFileDetail] = useState({
-        fileId: 0,
+        fileId: 6,
         swiftMessageList: []
     });
 
