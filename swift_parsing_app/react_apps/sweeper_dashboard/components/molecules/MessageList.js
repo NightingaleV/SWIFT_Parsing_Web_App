@@ -10,8 +10,6 @@ import {truncate} from "../../../utils";
 export function MessageList(props) {
 
     const {swiftMessageList, setPageNumber, totalPageCtn} = props
-    // const messageList = sourceFileDetail.swift_messages
-    // const [pageNumber, setPageNumber] = useState(0);
 
     const changePage = ({selected}) => {
         // this component indexes from 0 so first page has index 0, that's why we increase by one to get real number
@@ -45,7 +43,7 @@ export function MessageList(props) {
                         </thead>
                         <tbody>
                         {swiftMessageList.map(({transaction_id, direction, message_type}) =>
-                            <tr>
+                            <tr key={transaction_id}>
                                 <th scope="row">
                                     0551665IWOAJIEJGF
                                 </th>

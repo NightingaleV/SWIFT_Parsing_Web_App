@@ -9,7 +9,7 @@ import {truncate} from '../../../utils';
 // Assets
 
 export function SourceFileList(props) {
-    const {sourceFiles} = props
+    const {sourceFiles,  selectSourceFile} = props
 
     // return (
     //     <>
@@ -56,6 +56,8 @@ export function SourceFileList(props) {
     //     </>
     // );
 
+
+
     return (
         <>
 
@@ -72,14 +74,17 @@ export function SourceFileList(props) {
                     </div>
                 </div>
                 <div className="list-group">
-                    {sourceFiles.map(({created_at, file_name, total_msg_ctn}) =>
-                        <a href=""
-                           className="list-group-item list-group-item-action  d-flex justify-content-between align-items-center">
+                    {sourceFiles.map(({created_at, file_name, id, total_msg_ctn}) =>
+                        <button type="button" key={file_name}
+                                onClick={() => {
+                                    selectSourceFile(id)
+                                }}
+                                className="list-group-item list-group-item-action  d-flex justify-content-between align-items-center">
                             <span>{truncate(file_name, 20)} </span>
                             {/*<span>{moment(created_at).format('DD. MM. HH:MM')}</span>*/}
                             <span
                                 className="badge badge-lg badge-floating text-pwc-medium-grey bg-pwc-light-grey border-white badge-pill">{total_msg_ctn}</span>
-                        </a>
+                        </button>
                     )}
 
                 </div>
