@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react';
 // import classNames from 'classnames';
 import {SourceFileList, MessageList} from '../molecules'
 import axios from "axios";
+import 'bootstrap'
+import $ from 'jquery';
 import {requestConfig} from "../../../utils";
 
 // Assets
@@ -49,6 +51,9 @@ export function DataframeDashboard(props) {
 
 
     useEffect(() => {
+        // hide all collapsed messages
+        $('.collapse').collapse('hide');
+
         fetchSourceFileMessages(sourceFileDetail.fileId, pageNumber);
     }, [pageNumber, sourceFileDetail.fileId]);
 

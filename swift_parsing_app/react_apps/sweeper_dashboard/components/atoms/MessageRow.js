@@ -14,14 +14,15 @@ export function MessageRow({message}) {
     return (
         <>
             <tr key={transaction_id}>
-                <th scope="row">
-                    0551665IWOAJIEJGF
-                </th>
+
                 <td>
-                    <a className="btn" data-toggle="collapse" href={'#' + trans_id_strip_num}
+                    <a className="" data-toggle="collapse" href={'#' + trans_id_strip_num}
                        role="button" aria-expanded="false" aria-controls={message_type}>
-                        <i className="fas fa-chevron-left text-primary mr-3"/>
+                        <i className="fas fa-chevron-right text-primary mr-3"/>
                     </a>
+                </td>
+                <td scope="row">
+                    0551665IWOAJIEJGF
                 </td>
                 <td>
                     {transaction_id}
@@ -37,22 +38,57 @@ export function MessageRow({message}) {
                 </td>
             </tr>
             <tr className="collapse" id={trans_id_strip_num}>
-                <th scope="row">
-                    <i className="fas fa-long-arrow-alt-right text-primary ml-5"></i>
+                <th>
+                    Mandatory
                 </th>
+                <th>
+                    Field Name
+                </th>
+                <th>
+                    Field Tag
+                </th>
+                <th>
+                    Content Options
+                </th>
+                <th>
+                    Field Value
+                </th>
+            </tr>
+            <tr className="collapse" id={trans_id_strip_num}>
                 <td>
-awd
-                </td>
-                 <td>
-awd
+
                 </td>
                 <td>
-awd
+                    20
                 </td>
                 <td>
-awd
+                    Sender's Reference
+                </td>
+                <td>
+                    16x
+                </td>
+                <td>
+                    0000000000000000
                 </td>
             </tr>
+            <tr className="collapse" id={trans_id_strip_num}>
+                <td>
+
+                </td>
+                <td>
+                    32B
+                </td>
+                <td>
+                    Currency/Transaction Amount
+                </td>
+                <td>
+                    3!a15d
+                </td>
+                <td>
+                    20100622
+                </td>
+            </tr>
+
         </>
     );
 }
